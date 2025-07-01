@@ -67,8 +67,9 @@ Here are sample screenshots of the Spam Detector app in action:
 ![Main UI](screenshots/mainUi.png)
 
 ### Prediction Result - HAM
-![Prediction Result](screenshots/fam.png)
+![Ham Result](screenshots/fam.png)
 
 ### Prediction Result - SPAM
-![Metrics and History](screenshots/spam.png)
+![Spam Result](screenshots/spam.png)
 
+---
