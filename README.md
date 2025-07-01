@@ -34,6 +34,8 @@ This application demonstrates a real-world use case of Natural Language Processi
 
 ---
 
+
+
 ## 📂 Dataset
 
 - Dataset used: [SMS Spam Collection](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)
@@ -57,7 +59,13 @@ pip install -r requirements.txt
 # 3. Run the application
 streamlit run app.py
 
+``` 
+
 ---
+
+
+
+
 
 ## 📸 Screenshots
 
@@ -73,3 +81,4 @@ Here are sample screenshots of the Spam Detector app in action:
 ![Spam Result](screenshots/spam.png)
 
 ---
+
