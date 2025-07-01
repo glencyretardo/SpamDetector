@@ -13,7 +13,6 @@ st.markdown("<h1 style='text-align: center; color: hotpink;'>💌  Spam Detector
 st.markdown("<p style='text-align: center; color: grey;'>Try our spam detector… We promise to detect spam! 💫</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: grey;'>By Julia Verzosa and Glency Retardo 💫</p>", unsafe_allow_html=True)
 
-
 # 📊 Load and clean data
 df = pd.read_csv('spam.csv', encoding='latin-1')[['v1', 'v2']]
 df.columns = ['label', 'text']
@@ -29,10 +28,12 @@ X_test_vec = vectorizer.transform(X_test)
 model = MultinomialNB()
 model.fit(X_train_vec, y_train)
 
-# 💬 User input
-user_input = st.text_input("💖 Enter a message to check for spam:", "")
+# 💬 User input with cute button
+with st.form(key='spam_form'):
+    user_input = st.text_input("💖 Enter a message to check for spam:", "")
+    submit_button = st.form_submit_button("✨ Check Message ✨")
 
-if user_input:
+if submit_button and user_input:
     input_vec = vectorizer.transform([user_input.lower()])
     prediction = model.predict(input_vec)[0]
     st.markdown(f"<h3 style='color: {'red' if prediction == 'spam' else 'green'};'>🌼 Result: {prediction.upper()} 🌼</h3>", unsafe_allow_html=True)
@@ -44,5 +45,3 @@ if st.checkbox("💅 Show model accuracy and report"):
     st.write("🎯 **Accuracy:**", round(acc, 2))
     st.text("📄 Classification Report:")
     st.text(classification_report(y_test, y_pred))
-
-
