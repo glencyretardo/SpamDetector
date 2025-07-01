@@ -11,7 +11,7 @@ st.set_page_config(page_title="Spam Detector 💌", page_icon="🌸")
 # 🎀 Header
 st.markdown("<h1 style='text-align: center; color: hotpink;'>💌  Spam Detector 💌</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: grey;'>Try our spam detector… We promise to detect spam! 💫</p>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; color: grey;'>By Julia Verzosa and Glency Retardo 💫</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: grey;'>By Glency Retardo and Julia Verzosa 💫</p>", unsafe_allow_html=True)
 
 
 # 📊 Load and clean data
