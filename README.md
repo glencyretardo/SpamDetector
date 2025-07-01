@@ -1,75 +1,74 @@
-# Spam Detector Web Application
+# 💌 Spam Detector Web Application
 
-This project is a web-based **Spam Detection System** built using Python, Streamlit, and scikit-learn. It uses a supervised machine learning model—**Multinomial Naive Bayes**—to classify text messages as either **spam** or **ham** (not spam). The application allows users to input any message and receive an instant prediction of its classification.
+This is a simple and interactive **Spam Detection Web App** built using **Python**, **Streamlit**, and **scikit-learn**. The app allows users to enter any message and instantly find out whether it’s **spam** or **ham** (not spam), using a machine learning model trained on real SMS data.
 
 > Developed by Julia Verzosa and Glency Retardo  
-> BS Computer Science – University of Mindanao
+> BS Computer Science — University of Mindanao
 
 ---
 
-## Table of Contents
+## 🧠 About the App
 
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Dataset](#dataset)
-- [Installation & Usage](#installation--usage)
-- [Application Structure](#application-structure)
-- [Model Details](#model-details)
-- [Sample Usage](#sample-usage)
-- [License](#license)
-- [Authors](#authors)
+This application demonstrates a real-world use case of Natural Language Processing (NLP) through spam detection. It uses **Multinomial Naive Bayes**, a popular supervised learning algorithm for text classification, and presents predictions in a friendly, responsive user interface.
 
 ---
 
-## Project Overview
+## ✨ Features
 
-The Spam Detector application demonstrates a practical application of Natural Language Processing (NLP) and Machine Learning in the field of spam classification. By training on a real-world dataset of SMS messages, this app provides real-time predictions via an interactive web interface built with Streamlit.
-
----
-
-## Features
-
-- ✅ Real-time prediction of spam or ham messages
-- ✅ Interactive web interface using Streamlit
-- ✅ Text preprocessing (lowercasing and vectorization)
-- ✅ Classification using Multinomial Naive Bayes
-- ✅ Optional display of accuracy score and classification report
-- ✅ Clean and responsive user interface
+- 🔍 Real-time message classification (spam or ham)
+- 🎨 User-friendly interface with soft visuals
+- 🧠 Built-in model accuracy report toggle
+- 📊 Confidence score displayed for every prediction
+- 🕒 Message history log (last 5 messages shown)
+- 🌸 Clean design styled with CSS and emojis
 
 ---
 
-## Technologies Used
+## 🛠 Tech Used
 
-| Technology      | Description                               |
-|----------------|-------------------------------------------|
-| Python 3.x      | Core programming language                |
-| pandas          | Data loading and preprocessing           |
-| scikit-learn    | Machine learning model and evaluation    |
-| Streamlit       | Front-end web interface                  |
-| CountVectorizer | Text vectorization                       |
+- **Python 3**
+- **pandas** for data preprocessing
+- **scikit-learn** for ML modeling (MultinomialNB)
+- **Streamlit** for building the web interface
+- **CountVectorizer** for text vectorization
 
 ---
 
-## Dataset
+## 📂 Dataset
 
-The application uses the **SMS Spam Collection Dataset**, which contains a corpus of over 5,000 SMS messages tagged as either **spam** or **ham**.
-
-- Source: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection) / [Kaggle](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)
-- Format: CSV with columns `v1` (label) and `v2` (message text)
-
-We renamed the columns to `label` and `text`, and all messages were converted to lowercase as part of the preprocessing.
+- Dataset used: [SMS Spam Collection](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)
+- Contains 5,000+ labeled SMS messages (`spam` or `ham`)
+- Preprocessing steps: column renaming and lowercasing text
 
 ---
 
-## Installation & Usage
+## 🚀 Installation & Setup Instructions
 
-### Prerequisites
-
-Ensure that you have Python installed (preferably version 3.8 or above). It is also recommended to use a virtual environment.
-
-### 1. Clone the Repository
+Make sure Python 3.8+ is installed. Then:
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/yourusername/spam-detector.git
 cd spam-detector
+
+# 2. Install the dependencies
+pip install -r requirements.txt
+
+# 3. Run the application
+streamlit run app.py
+
+---
+
+## 📸 Screenshots
+
+Here are sample screenshots of the Spam Detector app in action:
+
+### Main Interface
+![Main UI](screenshots/mainUi.png)
+
+### Prediction Result - HAM
+![Prediction Result](screenshots/fam.png)
+
+### Prediction Result - SPAM
+![Metrics and History](screenshots/spam.png)
+
